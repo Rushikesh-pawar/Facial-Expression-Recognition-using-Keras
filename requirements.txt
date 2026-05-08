@@ -1,0 +1,26 @@
+# Core deep learning stack
+keras==3.7.0
+tensorflow==2.18.0
+
+# Data + numerics
+numpy>=1.26,<2.2
+pandas>=2.2
+scikit-learn>=1.5
+
+# Computer vision
+opencv-python>=4.10
+mediapipe>=0.10.18
+Pillow>=10.4
+
+# Web app
+Flask>=3.0
+gunicorn>=23.0
+
+# Visualization + experiment tracking
+matplotlib>=3.9
+seaborn>=0.13
+tqdm>=4.66
+
+# Dev / quality
+pytest>=8.3
+ruff>=0.7

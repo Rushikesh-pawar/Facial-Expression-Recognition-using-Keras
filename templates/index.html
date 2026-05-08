@@ -1,8 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Face expression recognition</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facial Expression Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
-    <img id="bg" width=800px height=640px src="{{ url_for('video_feed') }}">
+    <header>
+      <h1>Facial Expression Recognition</h1>
+      <p class="subtitle">
+        Real-time inference with EfficientNetV2 &middot; MediaPipe face detection &middot; Keras 3
+      </p>
+    </header>
+
+    <main>
+      <figure class="stream">
+        <img
+          id="video"
+          alt="Live emotion-annotated webcam feed"
+          src="{{ url_for('video_feed') }}"
+        />
+        <figcaption>Detected faces are annotated with their predicted emotion.</figcaption>
+      </figure>
+
+      <section class="legend">
+        <h2>Emotion classes</h2>
+        <ul>
+          <li><span class="dot dot-angry"></span>angry</li>
+          <li><span class="dot dot-disgust"></span>disgust</li>
+          <li><span class="dot dot-fear"></span>fear</li>
+          <li><span class="dot dot-happy"></span>happy</li>
+          <li><span class="dot dot-sad"></span>sad</li>
+          <li><span class="dot dot-surprise"></span>surprise</li>
+          <li><span class="dot dot-neutral"></span>neutral</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://github.com/" rel="noopener">View source</a>
+    </footer>
   </body>
 </html>
